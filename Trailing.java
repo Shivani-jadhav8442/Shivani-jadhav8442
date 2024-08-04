@@ -30,7 +30,7 @@ class Trailing
         // Binary Search.
         while (low < high)
         {
-            int mid = (low + high) >> 1;  // Compute mid-point
+            int mid = (low + high) / 2;  // Compute mid-point
 
             // Checking if mid's factorial 
             // contains n trailing zeroes.
@@ -42,8 +42,6 @@ class Trailing
 
         return low;
     }
-
-    // Driver code 
     public static void main (String[] args)
     {
         int n = 6;
@@ -51,7 +49,7 @@ class Trailing
     }
 }
 
-// This code is contributed by Anant Agarwal.
+
 /*Execution for n = 6
 Let's go through the code execution step-by-step to see why the output is 25 for n = 6.
 
@@ -103,13 +101,6 @@ Conclusion
 The binary search loop exits when low equals high, which is 25 in this case. This is the smallest number whose factorial has at least 6 trailing zeros.
 
 Thus, the output of the code for n = 6 is 25.
-
-Summary
-Binary Search Efficiency: The binary search efficiently narrows down the number by checking the condition for trailing zeros, adjusting the search range based on whether the midpoint meets the criteria.
-Correctness: The check function accurately counts trailing zeros by counting factors of 5 and its powers in the factorial decomposition.
-
-
-
 
 
  */
